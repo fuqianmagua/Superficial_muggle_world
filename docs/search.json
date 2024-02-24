@@ -1,0 +1,56 @@
+[
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hello Muggles",
+    "section": "",
+    "text": "1. Economic Basic info\nOverall picture of economy behavior from may dimensions to observe the chances\n\n\n\n\n\n\n\n\n\n\n\n\nGood luck boy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 13, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 10, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "about_me.html",
+    "href": "about_me.html",
+    "title": "About Me",
+    "section": "",
+    "text": "About this blog\n\n\n Back to top",
+    "crumbs": [
+      "Basics",
+      "Basic one"
+    ]
+  },
+  {
+    "objectID": "about_magic_world.html",
+    "href": "about_magic_world.html",
+    "title": "About Magic World",
+    "section": "",
+    "text": "About this blog\n\n\n Back to top",
+    "crumbs": [
+      "Layout",
+      "Layout one"
+    ]
+  },
+  {
+    "objectID": "about_muggle_world.html",
+    "href": "about_muggle_world.html",
+    "title": "About Muggle’s World",
+    "section": "",
+    "text": "About this blog\n\n\n Back to top",
+    "crumbs": [
+      "Basics",
+      "Basic two"
+    ]
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n Back to top"
+  }
+]
