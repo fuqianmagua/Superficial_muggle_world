@@ -1,0 +1,63 @@
+project:
+  type: website
+
+website:
+  title: "Superficial Muggle World"
+  #image: "quarto-dark-bg.jpeg"
+  favicon: "favicon.png"
+  google-analytics: "G-KL245KQBX3"
+  back-to-top-navigation: true
+  #site-url: https://www.Superficial-Muggle-World.com
+  comments:
+    giscus:
+      repo: fuqianmagua/Superficial-Muggle-World
+  navbar:
+    right:
+      - text: "About"
+        menu: 
+        - about_me.qmd
+        - about_muggle_world.qmd
+        - about_magic_world.qmd
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+  #announcement:  
+  #  content: "🎉 Muggle world open now, please enter through 9-3/4 gateway"
+  #  position: below-navbar
+  sidebar: 
+    style: "floating"
+    contents:
+      - section: "Basics"
+        contents:
+          - text: "Basic one"
+            href: about_me.qmd
+          - text: "Basic two"
+            href: about_muggle_world.qmd
+      - section: "Layout"
+        contents:
+          - text: "Layout one"
+            href: about_magic_world.qmd
+          - text: "Layout two"
+  page-footer:
+    left: 
+      - text: "First personal site"
+    center:
+      - text: "About"
+    right:
+      - icon: twitter
+        href: https://twitter.com/quarto_pub
+        aria-label: Quarto Twitter
+      - icon: github
+        href: https://github.com/quarto-dev/quarto-cli
+        aria-label: Quarto GitHub
+      - icon: rss
+        href: https://quarto.org/docs/blog/index.xml
+        aria-label: Quarto Blog RSS
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+editor: visual
+
