@@ -6,6 +6,7 @@ website:
   title: "Superficial Muggle World"
   #image: "quarto-dark-bg.jpeg"
   favicon: "favicon.png"
+  reader-mode: true
   google-analytics: "G-KL245KQBX3"
   back-to-top-navigation: true
   #site-url: https://www.Superficial-Muggle-World.com
@@ -13,6 +14,9 @@ website:
     giscus:
       repo: fuqianmagua/Superficial-Muggle-World
   navbar:
+    left: 
+      - text: "Econ intro"
+        href: Econ_Intro/index.qmd
     right:
       - text: "About"
         menu: 
@@ -20,7 +24,7 @@ website:
         - about_muggle_world.qmd
         - about_magic_world.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/ 
       - icon: twitter
         href: https://twitter.com
   #announcement:  
@@ -58,7 +62,20 @@ website:
 format:
   html:
     theme: cosmo
+    #theme: 
+    #  light: minty
+    #  dark: solar
     css: styles.css
+    grid:
+      sidebar-width: 200px
+      body-width: 1500px
+      margin-width: 200px
+      gutter-width: 1.5rem
+    #toc: true
+    page-layout: full
 
 editor: visual
 
+#execute:
+#  freeze: auto
+  #auto/true  # re-render only when source changes

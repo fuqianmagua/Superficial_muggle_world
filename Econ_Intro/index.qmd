@@ -1,0 +1,81 @@
+---
+title: "Econ Intro"
+format:
+  html:
+    toc: true
+---
+
+# 1.This is testing to set up margin
+
+## 1. 1 Margin 1: Economic Basic info
+
+Overall picture of economy behavior from may dimensions to observe the chances
+
+```{r}
+#| label: load-packages
+#| warning: false
+#| echo: false
+library(xlsx)
+library(reshape)
+library(ggplot2)
+library(tidyverse)
+raw_data_file <- "C:/Users/timch/iCloudDrive/Statistical Learning project/Raw data/Raw_Data.xlsx"
+EXCNYUSD <-openxlsx::read.xlsx(raw_data_file,1,detectDates = TRUE)
+df1 <- melt(EXCNYUSD, id.vars = "日期")
+ggplot(df1%>%filter(日期>='2024-01-01'),aes(x=日期, y=value,color=variable)) +
+  geom_line(linetype = "dashed") +
+  geom_line() +
+  geom_point(size=1) +
+  labs(title="China Yuan to US Dollar Exchange Rate",
+       subtitle="Bank of China publish price of US dollar in China Yuan",
+       x="Price of US dollar per 100 China Yuan",y="日期") +
+  theme_minimal()
+```
+
+## 1.2 Margin 2: Testing margin two for computation
+
+``` {#Test_Comp .r}
+1+2+3
+```
+
+# 2.This is test margin 2
+
+## 2.1 Testing margin 2 insert a pic
+
+![](/Garden.JPG)
+
+### 2.1.1 Test inside margin to display further
+
+You'll note that there are some special comments at the top of the code block. These are cell level options that make the figure [cross-referenceable](../authoring/cross-references.qmd).
+
+This document results in the following rendered output:
+
+You can produce a wide variety of output types from executable code blocks, including plots, tabular output from data frames, and plain text output (e.g. printing the results of statistical summaries).
+
+There are many options which control the behavior of code execution and output, you can read more about them in the article on [Execution Options](execution-options.qmd).
+
+In addition to code blocks which interupt the flow of markdown, you can also include code inline. Read more about inline code in the [Inline Code](inline-code.qmd) article.
+
+#### 2.1.1.1 Test inside margin to display diagram
+
+##### Output Formats {#output-formats}
+
+Another difference between R Markdown and Quarto is related to output formats. Quarto includes many more built in output formats (and many more options for customizing each format). Quarto also has native features for special project types like [Websites](../websites/), [Books](../books/), and [Blogs](../websites/website-blog.qmd) (rather than relying on external packages).
+
+To use a format in Quarto you use the `format` key rather than the `output` key as you did in R Markdown. Here's a comparison of equivalent format specifications:
+
+::: {layout-nroW="2"}
+##### R Markdown
+
+``` yaml
+title: "My Document" output:   html_document:     toc: true     number_sections: true     css: styles.css
+```
+
+###### Quarto
+
+``` yaml
+title: "My Document" format:   html:     toc: true     number-sections: true     css: styles.css
+```
+:::
+
+# 

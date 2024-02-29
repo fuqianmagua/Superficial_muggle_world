@@ -13,6 +13,14 @@ about:
     - icon: github
       text: Github
       href: https://github.com
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
 ---
 
 About this blog

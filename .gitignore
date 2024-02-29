@@ -1,10 +1,10 @@
 .Rproj.user
-.Rhistory
 .RData
+.Rhistory
 .Ruserdata
 
 /.quarto/
-.Rdata
 .httr-oauth
+.RData
 .DS_Store
 .quarto
