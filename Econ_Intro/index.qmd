@@ -78,4 +78,41 @@ title: "My Document" format:   html:     toc: true     number-sections: true    
 ```
 :::
 
-# 
+# 3.AKShare data
+
+```{r}
+#| warning: false
+#| echo: false
+library(reshape)
+library(ggplot2)
+library(tidyverse)
+#Data visidualization section
+raw_data_file <- "C:/Users/timch/iCloudDrive/Statistical Learning project/Raw data/Raw_Data.xlsx"
+EXCNYUSD <-openxlsx::read.xlsx(raw_data_file,1,detectDates = TRUE)
+       
+
+df <- data.frame(x = seq_along(EXCNYUSD[, 1]),
+                 EXCNYUSD)
+
+# Long format
+df1 <- melt(df, id.vars = "x")
+
+df1 <- melt(EXCNYUSD, id.vars = "日期")
+
+ggplot(df1%>%filter(日期>='2024-01-01'),aes(x=日期, y=value,color=variable)) +
+  geom_line(linetype = "dashed") +
+  geom_line() +
+  geom_point(size=1) +
+  theme_minimal()
+
+
+```
+```{r}
+#| warning: false
+#| echo: false
+ggplot(EXCNYUSD%>%filter(日期>='2023-10-01'),aes(x=日期, y=中行汇买价)) +
+  geom_point(alpha=0.5,size = 1) +
+  geom_line() +
+  theme_minimal()
+
+```
