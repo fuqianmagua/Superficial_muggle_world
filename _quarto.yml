@@ -6,7 +6,7 @@ website:
   title: "Superficial Muggle World"
   #image: "quarto-dark-bg.jpeg"
   favicon: "favicon.png"
-  reader-mode: true
+  #reader-mode: true
   google-analytics: "G-KL245KQBX3"
   back-to-top-navigation: true
   #site-url: https://www.Superficial-Muggle-World.com
@@ -14,36 +14,36 @@ website:
     giscus:
       repo: fuqianmagua/Superficial-Muggle-World
   navbar:
-    left: 
-      - text: "Econ intro"
-        href: Econ_Intro/index.qmd
+  #  left: 
+  #    - text: "Econ intro"
+  #      href: Econ_Intro/index.qmd
     right:
       - text: "About"
         menu: 
         - about_me.qmd
         - about_muggle_world.qmd
         - about_magic_world.qmd
-      - icon: github
-        href: https://github.com/ 
-      - icon: twitter
-        href: https://twitter.com
+  #    - icon: github
+  #      href: https://github.com/ 
+  #    - icon: twitter
+  #      href: https://twitter.com
   #announcement:  
   #  content: "🎉 Muggle world open now, please enter through 9-3/4 gateway"
   #  position: below-navbar
-  sidebar: 
-    style: "floating"
-    contents:
-      - section: "Basics"
-        contents:
-          - text: "Basic one"
-            href: about_me.qmd
-          - text: "Basic two"
-            href: about_muggle_world.qmd
-      - section: "Layout"
-        contents:
-          - text: "Layout one"
-            href: about_magic_world.qmd
-          - text: "Layout two"
+  #sidebar: 
+  #  style: "floating"
+  #  contents:
+  #    - section: "Basics"
+  #      contents:
+  #        - text: "Basic one"
+  #          href: about_me.qmd
+  #        - text: "Basic two"
+  #          href: about_muggle_world.qmd
+  #    - section: "Layout"
+  #      contents:
+  #        - text: "Layout one"
+  #          href: about_magic_world.qmd
+  #        - text: "Layout two"
   page-footer:
     left: 
       - text: "First personal site"

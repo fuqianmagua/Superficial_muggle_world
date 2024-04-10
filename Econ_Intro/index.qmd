@@ -3,6 +3,7 @@ title: "Econ Intro"
 format:
   html:
     toc: true
+    smooth-scroll: true
 ---
 
 # 1.This is testing to set up margin
@@ -42,7 +43,9 @@ ggplot(df1%>%filter(日期>='2024-01-01'),aes(x=日期, y=value,color=variable))
 
 ## 2.1 Testing margin 2 insert a pic
 
-![](/Garden.JPG)
+![](/Garden.JPG){width="621"}
+
+![](/Rainbow.JPG)
 
 ### 2.1.1 Test inside margin to display further
 
@@ -88,18 +91,24 @@ library(ggplot2)
 library(tidyverse)
 #Data visidualization section
 raw_data_file <- "C:/Users/timch/iCloudDrive/Statistical Learning project/Raw data/Raw_Data.xlsx"
-EXCNYUSD <-openxlsx::read.xlsx(raw_data_file,1,detectDates = TRUE)
+EXCNYUSD <-openxlsx::read.xlsx(raw_data_file,'EXCNYUSD',detectDates = TRUE)
+EXCNYEUR <-openxlsx::read.xlsx(raw_data_file,'EXCNYEUR',detectDates = TRUE)
+EXCNYJPY <-openxlsx::read.xlsx(raw_data_file,'EXCNYJPY',detectDates = TRUE)
        
 
-df <- data.frame(x = seq_along(EXCNYUSD[, 1]),
-                 EXCNYUSD)
+#df <- data.frame(x = seq_along(EXCNYUSD[, 1]),EXCNYUSD)
 
 # Long format
-df1 <- melt(df, id.vars = "x")
+#df1 <- melt(df, id.vars = "x")
 
-df1 <- melt(EXCNYUSD, id.vars = "日期")
+df1 <- melt(EXCNYUSD, id.vars = "日期") 
 
-ggplot(df1%>%filter(日期>='2024-01-01'),aes(x=日期, y=value,color=variable)) +
+df1 <- EXCNYUSD %>% select("日期","央行中间价") %>%  melt(id.vars = "日期") %>% mutate(Currency='USD',st=scale(value))
+df2 <- EXCNYEUR %>% select("日期","央行中间价") %>%  melt(id.vars = "日期") %>% mutate(Currency='EUR',st=scale(value))
+df3 <- EXCNYJPY %>% select("日期","央行中间价") %>%  melt(id.vars = "日期") %>% mutate(Currency='JPY',st=scale(value))
+EX <- df1 %>% union(df2) %>% union(df3)
+
+ggplot(EX,aes(x=日期, y=st,color=Currency)) +
   geom_line(linetype = "dashed") +
   geom_line() +
   geom_point(size=1) +
@@ -107,9 +116,14 @@ ggplot(df1%>%filter(日期>='2024-01-01'),aes(x=日期, y=value,color=variable))
 
 
 ```
+
 ```{r}
 #| warning: false
 #| echo: false
+library(xlsx)
+library(reshape)
+library(ggplot2)
+library(tidyverse)
 ggplot(EXCNYUSD%>%filter(日期>='2023-10-01'),aes(x=日期, y=中行汇买价)) +
   geom_point(alpha=0.5,size = 1) +
   geom_line() +
