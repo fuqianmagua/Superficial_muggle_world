@@ -14,47 +14,11 @@
     "text": "Back to top"
   },
   {
-    "objectID": "about_muggle_world.html",
-    "href": "about_muggle_world.html",
-    "title": "About Muggle’s World",
-    "section": "",
-    "text": "About this blog\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 13, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 10, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items\n\n Back to top",
-    "crumbs": [
-      "Econ intro",
-      "Basics",
-      "Basic two"
-    ]
-  },
-  {
-    "objectID": "about_magic_world.html",
-    "href": "about_magic_world.html",
-    "title": "About Magic World",
-    "section": "",
-    "text": "About this blog\n\n\n Back to top",
-    "crumbs": [
-      "Econ intro",
-      "Layout",
-      "Layout one"
-    ]
-  },
-  {
-    "objectID": "about_me.html",
-    "href": "about_me.html",
-    "title": "About Me",
-    "section": "",
-    "text": "About this blog\n\n\n Back to top",
-    "crumbs": [
-      "Econ intro",
-      "Basics",
-      "Basic one"
-    ]
-  },
-  {
     "objectID": "Econ_Intro/index.html",
     "href": "Econ_Intro/index.html",
     "title": "Econ Intro",
     "section": "",
-    "text": "Overall picture of economy behavior from may dimensions to observe the chances\n\n\n\n\n\n\n\n\n\n\n\n\n1+2+3"
+    "text": "Overall picture of economy behavior from may dimensions to observe the chances\n\n\n\n\n\n\n\n\n1+2+3"
   },
   {
     "objectID": "Econ_Intro/index.html#margin-1-economic-basic-info",
@@ -76,6 +40,202 @@
     "title": "Econ Intro",
     "section": "2.1 Testing margin 2 insert a pic",
     "text": "2.1 Testing margin 2 insert a pic\n\n\n\n2.1.1 Test inside margin to display further\nYou’ll note that there are some special comments at the top of the code block. These are cell level options that make the figure cross-referenceable.\nThis document results in the following rendered output:\nYou can produce a wide variety of output types from executable code blocks, including plots, tabular output from data frames, and plain text output (e.g. printing the results of statistical summaries).\nThere are many options which control the behavior of code execution and output, you can read more about them in the article on Execution Options.\nIn addition to code blocks which interupt the flow of markdown, you can also include code inline. Read more about inline code in the Inline Code article.\n\n2.1.1.1 Test inside margin to display diagram\n\nOutput Formats\nAnother difference between R Markdown and Quarto is related to output formats. Quarto includes many more built in output formats (and many more options for customizing each format). Quarto also has native features for special project types like Websites, Books, and Blogs (rather than relying on external packages).\nTo use a format in Quarto you use the format key rather than the output key as you did in R Markdown. Here’s a comparison of equivalent format specifications:\n\n\nR Markdown\ntitle: \"My Document\" output:   html_document:     toc: true     number_sections: true     css: styles.css\n\nQuarto\ntitle: \"My Document\" format:   html:     toc: true     number-sections: true     css: styles.css"
+  },
+  {
+    "objectID": "about_muggle_world.html",
+    "href": "about_muggle_world.html",
+    "title": "About Muggle’s World",
+    "section": "",
+    "text": "About this blog\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nFeb 13, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nFeb 10, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "about_magic_world.html",
+    "href": "about_magic_world.html",
+    "title": "About Magic World",
+    "section": "",
+    "text": "About this blog\n\n\n Back to top"
+  },
+  {
+    "objectID": "about_me.html",
+    "href": "about_me.html",
+    "title": "About Me",
+    "section": "",
+    "text": "About this blog\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/Garden_Maintenance/index.html",
+    "href": "docs/Garden_Maintenance/index.html",
+    "title": "Garden Maintenance",
+    "section": "",
+    "text": "冬肥，重剪，最冷的时候啥也不用干\n\n\n\n冬肥，重剪，入春前扦插播种，最冷的时候啥也不用干\n\n\n\n生长季，春季抹芽控型，小白药，小粉药，蜗牛药\n\n\n\n生长季，春季抹芽控型，春肥，小白药，小粉药，蜗牛药\n\n\n\n生长季，春肥，停止生长后轻剪，入梅前清理杂草，入梅前扦插\n\n\n\n停止生长后轻剪，入梅前清理杂草\n\n\n\n\n\n\n\n\n\n秋肥，刺蛾药，小白药，小粉药\n\n\n\n秋肥，刺蛾药，小白药，小粉药，中剪，移栽，修根，入秋前扦插\n\n\n\n扫落叶清理，中剪，移栽，修根，收集种子\n\n\n\n扫落叶清理，最冷的时候啥也不用干"
+  },
+  {
+    "objectID": "docs/Garden_Maintenance/index.html#jan",
+    "href": "docs/Garden_Maintenance/index.html#jan",
+    "title": "Garden Maintenance",
+    "section": "",
+    "text": "冬肥，重剪，最冷的时候啥也不用干"
+  },
+  {
+    "objectID": "docs/Garden_Maintenance/index.html#feb",
+    "href": "docs/Garden_Maintenance/index.html#feb",
+    "title": "Garden Maintenance",
+    "section": "",
+    "text": "冬肥，重剪，入春前扦插播种，最冷的时候啥也不用干"
+  },
+  {
+    "objectID": "docs/Garden_Maintenance/index.html#mar",
+    "href": "docs/Garden_Maintenance/index.html#mar",
+    "title": "Garden Maintenance",
+    "section": "",
+    "text": "生长季，春季抹芽控型，小白药，小粉药，蜗牛药"
+  },
+  {
+    "objectID": "docs/Garden_Maintenance/index.html#apr",
+    "href": "docs/Garden_Maintenance/index.html#apr",
+    "title": "Garden Maintenance",
+    "section": "",
+    "text": "生长季，春季抹芽控型，春肥，小白药，小粉药，蜗牛药"
+  },
+  {
+    "objectID": "docs/Garden_Maintenance/index.html#may",
+    "href": "docs/Garden_Maintenance/index.html#may",
+    "title": "Garden Maintenance",
+    "section": "",
+    "text": "生长季，春肥，停止生长后轻剪，入梅前清理杂草，入梅前扦插"
+  },
+  {
+    "objectID": "docs/Garden_Maintenance/index.html#jun",
+    "href": "docs/Garden_Maintenance/index.html#jun",
+    "title": "Garden Maintenance",
+    "section": "",
+    "text": "停止生长后轻剪，入梅前清理杂草"
+  },
+  {
+    "objectID": "docs/Garden_Maintenance/index.html#sep",
+    "href": "docs/Garden_Maintenance/index.html#sep",
+    "title": "Garden Maintenance",
+    "section": "",
+    "text": "秋肥，刺蛾药，小白药，小粉药"
+  },
+  {
+    "objectID": "docs/Garden_Maintenance/index.html#oct",
+    "href": "docs/Garden_Maintenance/index.html#oct",
+    "title": "Garden Maintenance",
+    "section": "",
+    "text": "秋肥，刺蛾药，小白药，小粉药，中剪，移栽，修根，入秋前扦插"
+  },
+  {
+    "objectID": "docs/Garden_Maintenance/index.html#nov",
+    "href": "docs/Garden_Maintenance/index.html#nov",
+    "title": "Garden Maintenance",
+    "section": "",
+    "text": "扫落叶清理，中剪，移栽，修根，收集种子"
+  },
+  {
+    "objectID": "docs/Garden_Maintenance/index.html#dec",
+    "href": "docs/Garden_Maintenance/index.html#dec",
+    "title": "Garden Maintenance",
+    "section": "",
+    "text": "扫落叶清理，最冷的时候啥也不用干"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html",
+    "href": "Garden_Maintenance/Garden_Maintenance.html",
+    "title": "My little garden",
+    "section": "",
+    "text": "冬肥，重剪，最冷的时候啥也不用干\n\n\n\n冬肥，重剪，入春前扦插播种，最冷的时候啥也不用干\n\n\n\n生长季，春季抹芽控型，小白药，小粉药，蜗牛药\n\n\n\n生长季，春季抹芽控型，春肥，小白药，小粉药，蜗牛药\n\n\n\n生长季，春肥，停止生长后轻剪，入梅前清理杂草，入梅前扦插\n\n\n\n停止生长后轻剪，入梅前清理杂草,出梅后用刺蛾药（高效氯氰菊酯，半个月一次）\n\n\n\n出梅后用刺蛾药（高效氯氰菊酯，半个月一次）\n\n\n\n\n\n\n秋肥，小白药，小粉药\n\n\n\n秋肥，小白药，小粉药，中剪，移栽，修根，入秋前扦插\n\n\n\n扫落叶清理，中剪，移栽，修根，收集种子\n\n\n\n扫落叶清理，然后开始清园喷药，最冷的时候啥也不用干\n\n\n\n\n\n\n冬天施肥，储存能量\n春天开始生长后施肥激一下\n秋天开始生长前施肥激一下，避开夏天高温\n控量不要烧苗了\n\n\n\n枫树修剪-先养干后养冠\n集中在出冬后（看失枝情况），根据春季生长的加粗，长高的预期修剪，剪下的枝条刚好可以扦插准备春季的生长。\n出夏后，入秋前，不至于剪枝受伤，又可以激发秋季再串一串，然后继续扦插\n（春季入夏前那波可能不太适合，新枝条还太嫩，跟多是去掉一些叶子，减少夏天丢失水分的压力，也可能是我想的不对）\n\n\n\n春季2-3月发芽前，9-10月秋季生长季前\n修建后的枝条，底部去皮，杀菌，生根液泡一下，统一种植到育苗棚里\n\n\n\n春季3-4月发芽后，看一下生长情况，针对已经开始定型的树看一下新出的芽点，为了防止串枝，抹掉芽点\n\n\n\n如春后关注枝干上有没有蚜虫，一般小白药小粉药可以预防；\n然后是入春时，入梅前，湿度大时容易滋生蜗牛，啃食植物叶片，可以撒点小蓝药防蜗牛；\n然后是入夏时，入秋前，昆虫，飞蛾下卵开始出毛毛虫，天牛，需要用高效氯氰菊酯，半个月一次\n\n\n\n春季开始肆意生长，需要在入梅前清理杂草，保持清爽以免细菌，虫子滋生，同时做一次露台地面水道清理。\n秋季落叶后把放了一年成熟自然掉落的种子收集一下，枯叶集中吹到一起，入冬前一次性清理掉，同时做一次露台地面水道清理，以及两个木台下面清理。\n\n\n\n秋季落叶后，11-12月最适合移栽，修根（盆栽）；其次是5-6月，春季生长期后，开始"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#time-order",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#time-order",
+    "title": "My little garden",
+    "section": "",
+    "text": "冬肥，重剪，最冷的时候啥也不用干\n\n\n\n冬肥，重剪，入春前扦插播种，最冷的时候啥也不用干\n\n\n\n生长季，春季抹芽控型，小白药，小粉药，蜗牛药\n\n\n\n生长季，春季抹芽控型，春肥，小白药，小粉药，蜗牛药\n\n\n\n生长季，春肥，停止生长后轻剪，入梅前清理杂草，入梅前扦插\n\n\n\n停止生长后轻剪，入梅前清理杂草,出梅后用刺蛾药（高效氯氰菊酯，半个月一次）\n\n\n\n出梅后用刺蛾药（高效氯氰菊酯，半个月一次）\n\n\n\n\n\n\n秋肥，小白药，小粉药\n\n\n\n秋肥，小白药，小粉药，中剪，移栽，修根，入秋前扦插\n\n\n\n扫落叶清理，中剪，移栽，修根，收集种子\n\n\n\n扫落叶清理，然后开始清园喷药，最冷的时候啥也不用干"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#task-order",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#task-order",
+    "title": "My little garden",
+    "section": "",
+    "text": "冬天施肥，储存能量\n春天开始生长后施肥激一下\n秋天开始生长前施肥激一下，避开夏天高温\n控量不要烧苗了\n\n\n\n枫树修剪-先养干后养冠\n集中在出冬后（看失枝情况），根据春季生长的加粗，长高的预期修剪，剪下的枝条刚好可以扦插准备春季的生长。\n出夏后，入秋前，不至于剪枝受伤，又可以激发秋季再串一串，然后继续扦插\n（春季入夏前那波可能不太适合，新枝条还太嫩，跟多是去掉一些叶子，减少夏天丢失水分的压力，也可能是我想的不对）\n\n\n\n春季2-3月发芽前，9-10月秋季生长季前\n修建后的枝条，底部去皮，杀菌，生根液泡一下，统一种植到育苗棚里\n\n\n\n春季3-4月发芽后，看一下生长情况，针对已经开始定型的树看一下新出的芽点，为了防止串枝，抹掉芽点\n\n\n\n如春后关注枝干上有没有蚜虫，一般小白药小粉药可以预防；\n然后是入春时，入梅前，湿度大时容易滋生蜗牛，啃食植物叶片，可以撒点小蓝药防蜗牛；\n然后是入夏时，入秋前，昆虫，飞蛾下卵开始出毛毛虫，天牛，需要用高效氯氰菊酯，半个月一次\n\n\n\n春季开始肆意生长，需要在入梅前清理杂草，保持清爽以免细菌，虫子滋生，同时做一次露台地面水道清理。\n秋季落叶后把放了一年成熟自然掉落的种子收集一下，枯叶集中吹到一起，入冬前一次性清理掉，同时做一次露台地面水道清理，以及两个木台下面清理。\n\n\n\n秋季落叶后，11-12月最适合移栽，修根（盆栽）；其次是5-6月，春季生长期后，开始"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#泰勒",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#泰勒",
+    "title": "My little garden",
+    "section": "泰勒",
+    "text": "泰勒"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#金隐",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#金隐",
+    "title": "My little garden",
+    "section": "金隐",
+    "text": "金隐"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#月升",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#月升",
+    "title": "My little garden",
+    "section": "月升",
+    "text": "月升"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#秋月",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#秋月",
+    "title": "My little garden",
+    "section": "秋月",
+    "text": "秋月"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#火烈鸟",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#火烈鸟",
+    "title": "My little garden",
+    "section": "火烈鸟",
+    "text": "火烈鸟"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#蓝杉",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#蓝杉",
+    "title": "My little garden",
+    "section": "蓝杉",
+    "text": "蓝杉\n。。。。"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#土",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#土",
+    "title": "My little garden",
+    "section": "土",
+    "text": "土"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#盆",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#盆",
+    "title": "My little garden",
+    "section": "盆",
+    "text": "盆"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#植物",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#植物",
+    "title": "My little garden",
+    "section": "植物",
+    "text": "植物"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#太阳能灯",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#太阳能灯",
+    "title": "My little garden",
+    "section": "太阳能灯",
+    "text": "太阳能灯"
+  },
+  {
+    "objectID": "Garden_Maintenance/Garden_Maintenance.html#其它",
+    "href": "Garden_Maintenance/Garden_Maintenance.html#其它",
+    "title": "My little garden",
+    "section": "其它",
+    "text": "其它"
   },
   {
     "objectID": "posts/post-with-code/index.html",

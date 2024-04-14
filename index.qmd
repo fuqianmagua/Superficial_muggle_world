@@ -31,10 +31,8 @@ title-block-banner: "Garden.JPG"
 #title-block-banner: true
 ---
 
-::: {layout="[1,3]"}
-[![](images/红乙女.jpeg){fig-align="left" width="289" height="362"}](Econ_Intro/index.qmd)
+::: {layout-ncol=2}
+[![](images/红乙女.jpeg){fig-align="center" width="527" height="643"}](Garden_Maintenance/Garden_Maintenance.qmd)
 
-![](images/Rainbow.JPG){fig-align="left" width="289" height="362"}
-
-![](images/黄金流泉.JPG){fig-align="left" width="289" height="362"}
+[![](images/猫肥家润.JPG){fig-align="center" width="527" height="643"}](Econ_Intro/index.qmd)
 :::

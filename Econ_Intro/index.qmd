@@ -20,7 +20,7 @@ library(xlsx)
 library(reshape)
 library(ggplot2)
 library(tidyverse)
-raw_data_file <- "C:/Users/timch/iCloudDrive/Statistical Learning project/Raw data/Raw_Data.xlsx"
+raw_data_file <- "C:/Users/1/iCloudDrive/Statistical Learning project/Raw data/Raw_Data.xlsx"
 EXCNYUSD <-openxlsx::read.xlsx(raw_data_file,1,detectDates = TRUE)
 df1 <- melt(EXCNYUSD, id.vars = "日期")
 ggplot(df1%>%filter(日期>='2024-01-01'),aes(x=日期, y=value,color=variable)) +
@@ -90,7 +90,7 @@ library(reshape)
 library(ggplot2)
 library(tidyverse)
 #Data visidualization section
-raw_data_file <- "C:/Users/timch/iCloudDrive/Statistical Learning project/Raw data/Raw_Data.xlsx"
+raw_data_file <- "C:/Users/1/iCloudDrive/Statistical Learning project/Raw data/Raw_Data.xlsx"
 EXCNYUSD <-openxlsx::read.xlsx(raw_data_file,'EXCNYUSD',detectDates = TRUE)
 EXCNYEUR <-openxlsx::read.xlsx(raw_data_file,'EXCNYEUR',detectDates = TRUE)
 EXCNYJPY <-openxlsx::read.xlsx(raw_data_file,'EXCNYJPY',detectDates = TRUE)
