@@ -4,16 +4,21 @@ project:
 
 website:
   title: "Superficial Muggle World"
-  #image: "quarto-dark-bg.jpeg"
-  favicon: "favicon.png"
+  favicon: "images/Miso_Favicon.jpg"
+  twitter-card: true
   #reader-mode: true
   google-analytics: "G-KL245KQBX3"
   back-to-top-navigation: true
   #site-url: https://www.Superficial-Muggle-World.com
-  comments:
-    giscus:
-      repo: fuqianmagua/Superficial-Muggle-World
+  #comments:
+  #  giscus:
+  #    repo: fuqianmagua/Superficial-Muggle-World
+  search: 
+    location: navbar
+    type: overlay
+
   navbar:
+    logo: "Miso_Watching_You.jpg"
   #  left: 
   #    - text: "Econ intro"
   #      href: Econ_Intro/index.qmd
@@ -44,24 +49,25 @@ website:
   #        - text: "Layout one"
   #          href: about_magic_world.qmd
   #        - text: "Layout two"
-  page-footer:
-    left: 
-      - text: "First personal site"
-    center:
-      - text: "About"
-    right:
-      - icon: twitter
-        href: https://twitter.com/quarto_pub
-        aria-label: Quarto Twitter
-      - icon: github
-        href: https://github.com/quarto-dev/quarto-cli
-        aria-label: Quarto GitHub
-      - icon: rss
-        href: https://quarto.org/docs/blog/index.xml
-        aria-label: Quarto Blog RSS
+#  page-footer:
+    #left: 
+    #  - text: "First personal site"
+    #center:
+    #  - text: "About"
+#    right:
+#      - icon: twitter
+#        href: https://twitter.com/quarto_pub
+#        aria-label: Quarto Twitter
+#      - icon: github
+#        href: https://github.com/quarto-dev/quarto-cli
+#        aria-label: Quarto GitHub
+#      - icon: rss
+#        href: https://quarto.org/docs/blog/index.xml
+#        aria-label: Quarto Blog RSS
 format:
   html:
-    theme: cosmo
+    theme: sketchy
+    #cosmo
     #theme: 
     #  light: minty
     #  dark: solar
@@ -75,6 +81,7 @@ format:
     page-layout: full
 
 editor: visual
+
 
 #execute:
 #  freeze: auto

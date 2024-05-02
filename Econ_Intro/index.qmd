@@ -4,129 +4,239 @@ format:
   html:
     toc: true
     smooth-scroll: true
+    page-layout: full
+execute:
+  echo: false
+
 ---
 
-# 1.This is testing to set up margin
+# Basic Econ Statics
 
-## 1. 1 Margin 1: Economic Basic info
-
-Overall picture of economy behavior from may dimensions to observe the chances
+## 1.1 FX Rate
 
 ```{r}
-#| label: load-packages
+#| label: CNY-TO-USD-FX
+#| fig-width: 18
+#| fig-height: 3
+#| fig-column: page-right
 #| warning: false
-#| echo: false
-library(xlsx)
+library(openxlsx)
 library(reshape)
 library(ggplot2)
 library(tidyverse)
+library(stringr)
+library(ggpubr)
 raw_data_file <- "C:/Users/1/iCloudDrive/Statistical Learning project/Raw data/Raw_Data.xlsx"
-EXCNYUSD <-openxlsx::read.xlsx(raw_data_file,1,detectDates = TRUE)
+EXCNYUSD <-openxlsx::read.xlsx(raw_data_file,sheet="EXCNYUSD",detectDates = TRUE)
 df1 <- melt(EXCNYUSD, id.vars = "日期")
-ggplot(df1%>%filter(日期>='2024-01-01'),aes(x=日期, y=value,color=variable)) +
+EXCNYUSD_plot <- ggplot(df1%>%filter(日期>='2000-01-01'),aes(x=日期, y=value,color=variable)) +
   geom_line(linetype = "dashed") +
   geom_line() +
   geom_point(size=1) +
   labs(title="China Yuan to US Dollar Exchange Rate",
        subtitle="Bank of China publish price of US dollar in China Yuan",
-       x="Price of US dollar per 100 China Yuan",y="日期") +
+       x="Date",y="Price of US dollar per 100 China Yuan") +
   theme_minimal()
-```
 
-## 1.2 Margin 2: Testing margin two for computation
 
-``` {#Test_Comp .r}
-1+2+3
-```
-
-# 2.This is test margin 2
-
-## 2.1 Testing margin 2 insert a pic
-
-![](/Garden.JPG){width="621"}
-
-![](/Rainbow.JPG)
-
-### 2.1.1 Test inside margin to display further
-
-You'll note that there are some special comments at the top of the code block. These are cell level options that make the figure [cross-referenceable](../authoring/cross-references.qmd).
-
-This document results in the following rendered output:
-
-You can produce a wide variety of output types from executable code blocks, including plots, tabular output from data frames, and plain text output (e.g. printing the results of statistical summaries).
-
-There are many options which control the behavior of code execution and output, you can read more about them in the article on [Execution Options](execution-options.qmd).
-
-In addition to code blocks which interupt the flow of markdown, you can also include code inline. Read more about inline code in the [Inline Code](inline-code.qmd) article.
-
-#### 2.1.1.1 Test inside margin to display diagram
-
-##### Output Formats {#output-formats}
-
-Another difference between R Markdown and Quarto is related to output formats. Quarto includes many more built in output formats (and many more options for customizing each format). Quarto also has native features for special project types like [Websites](../websites/), [Books](../books/), and [Blogs](../websites/website-blog.qmd) (rather than relying on external packages).
-
-To use a format in Quarto you use the `format` key rather than the `output` key as you did in R Markdown. Here's a comparison of equivalent format specifications:
-
-::: {layout-nroW="2"}
-##### R Markdown
-
-``` yaml
-title: "My Document" output:   html_document:     toc: true     number_sections: true     css: styles.css
-```
-
-###### Quarto
-
-``` yaml
-title: "My Document" format:   html:     toc: true     number-sections: true     css: styles.css
-```
-:::
-
-# 3.AKShare data
-
-```{r}
-#| warning: false
-#| echo: false
-library(reshape)
-library(ggplot2)
-library(tidyverse)
-#Data visidualization section
-raw_data_file <- "C:/Users/1/iCloudDrive/Statistical Learning project/Raw data/Raw_Data.xlsx"
-EXCNYUSD <-openxlsx::read.xlsx(raw_data_file,'EXCNYUSD',detectDates = TRUE)
-EXCNYEUR <-openxlsx::read.xlsx(raw_data_file,'EXCNYEUR',detectDates = TRUE)
-EXCNYJPY <-openxlsx::read.xlsx(raw_data_file,'EXCNYJPY',detectDates = TRUE)
-       
-
-#df <- data.frame(x = seq_along(EXCNYUSD[, 1]),EXCNYUSD)
-
-# Long format
-#df1 <- melt(df, id.vars = "x")
-
-df1 <- melt(EXCNYUSD, id.vars = "日期") 
-
-df1 <- EXCNYUSD %>% select("日期","央行中间价") %>%  melt(id.vars = "日期") %>% mutate(Currency='USD',st=scale(value))
-df2 <- EXCNYEUR %>% select("日期","央行中间价") %>%  melt(id.vars = "日期") %>% mutate(Currency='EUR',st=scale(value))
-df3 <- EXCNYJPY %>% select("日期","央行中间价") %>%  melt(id.vars = "日期") %>% mutate(Currency='JPY',st=scale(value))
-EX <- df1 %>% union(df2) %>% union(df3)
-
-ggplot(EX,aes(x=日期, y=st,color=Currency)) +
+EXCNYEUR <-openxlsx::read.xlsx(raw_data_file,sheet="EXCNYEUR",detectDates = TRUE)
+df2 <- melt(EXCNYEUR, id.vars = "日期")
+EXCNYEUR_plot <- ggplot(df2%>%filter(日期>='2000-01-01'),aes(x=日期, y=value,color=variable)) +
   geom_line(linetype = "dashed") +
   geom_line() +
   geom_point(size=1) +
+  labs(title="China Yuan to EUR Exchange Rate",
+       subtitle="Bank of China publish price of EUR in China Yuan",
+       x="Date",y="Price of EUR per 100 China Yuan") +
   theme_minimal()
 
+EXCNYJPY <-openxlsx::read.xlsx(raw_data_file,sheet="EXCNYJPY",detectDates = TRUE)
+df3 <- melt(EXCNYJPY, id.vars = "日期")
+EXCNYJPY_plot <- ggplot(df3%>%filter(日期>='2000-01-01'),aes(x=日期, y=value,color=variable)) +
+  geom_line(linetype = "dashed") +
+  geom_line() +
+  geom_point(size=1) +
+  labs(title="China Yuan to JPY Exchange Rate",
+       subtitle="Bank of China publish price of JPY in China Yuan",
+       x="Date",y="Price of JPY per 100 China Yuan") +
+  theme_minimal()
 
+ggarrange(EXCNYUSD_plot, EXCNYEUR_plot, EXCNYJPY_plot, ncol=3, nrow=1)
 ```
+
+## 1.2 Other instruments
 
 ```{r}
+#| label: Other_instrument
+#| fig-width: 18
+#| fig-height: 3
+#| fig-column: page-right
 #| warning: false
-#| echo: false
-library(xlsx)
-library(reshape)
-library(ggplot2)
-library(tidyverse)
-ggplot(EXCNYUSD%>%filter(日期>='2023-10-01'),aes(x=日期, y=中行汇买价)) +
-  geom_point(alpha=0.5,size = 1) +
+GOLD <-openxlsx::read.xlsx(raw_data_file,sheet="GOLD",detectDates = TRUE)
+df4 <- melt(GOLD, id.vars = "交易时间")
+GOLD_plot <- ggplot(df4%>%filter(交易时间>='2000-01-01'),aes(x=交易时间, y=value,color=variable)) +
+  geom_line(linetype = "dashed") +
   geom_line() +
+  geom_point(size=1) +
+  labs(title="Gold price trend",
+       subtitle="Bank of China publish gold price",
+       x="Date",y="Price gold") +
+  theme_minimal()
+
+OIL <-openxlsx::read.xlsx(raw_data_file,sheet="Oil",detectDates = TRUE)
+df13 <- OIL %>% select(调整日期,汽油价格,柴油价格) %>% melt(id.vars = "调整日期")
+OIL_plot <- ggplot(df13%>%filter(调整日期>='2000-01-01'),aes(x=调整日期, y=value,color=variable)) +
+  geom_line() +
+  geom_point(size=1) +
+  labs(title="Oil price trend",
+       subtitle="Bank of China publish oil price",
+       x="Date",y="Price oil") +
+  theme_minimal()
+
+BTC <-openxlsx::read.xlsx(raw_data_file,sheet="BTC",detectDates = TRUE)
+df11<-BTC %>% filter(交易量!='') %>% 
+  select(日期,交易量,高,低) %>%
+  mutate(交易=str_sub(交易量,-1),交=as.numeric(substr(交易量,1,nchar(交易量)-1))) %>%
+  mutate(易=ifelse(交易=='K',
+                        交*1000,
+                        ifelse(交易=='M',
+                              交*1000000,
+                              ifelse(交易=='B',
+                                      交*1000000,
+                                      交)
+                              )
+                        )
+        ) %>%
+  select(日期,易,高,低) %>%
+  melt(id.vars = c("日期","易"))
+  
+BTC_plot <- ggplot(df11%>%filter(日期>='2000-01-01'),aes(x=日期)) +
+  geom_line(aes(y=log(value),color=variable)) +
+  geom_line(aes(y = log(易)))+
+  scale_y_continuous(name = "价格",sec.axis = sec_axis(transform = ~.*1, name = "流量")) +
+  labs(title="BTC price trend",
+       subtitle="BTC price",
+       x="Date",y="BTC Price") +
+  theme_minimal()
+
+
+ETH <-openxlsx::read.xlsx(raw_data_file,sheet="Ethereum",detectDates = TRUE)
+df12<-ETH %>% filter(交易量!='') %>% 
+  select(日期,交易量,高,低) %>%
+  mutate(交易=str_sub(交易量,-1),交=as.numeric(substr(交易量,1,nchar(交易量)-1))) %>%
+  mutate(易=ifelse(交易=='K',
+                        交*1000,
+                        ifelse(交易=='M',
+                              交*1000000,
+                              ifelse(交易=='B',
+                                      交*1000000,
+                                      交)
+                              )
+                        )
+        ) %>%
+  select(日期,易,高,低) %>%
+  melt(id.vars = c("日期","易"))
+  
+ETH_plot <- ggplot(df12%>%filter(日期>='2000-01-01'),aes(x=日期)) +
+  geom_line(aes(y=log(value),color=variable)) +
+  geom_line(aes(y = log(易)))+
+  scale_y_continuous(name = "价格",sec.axis = sec_axis(transform = ~.*1, name = "流量")) +
+  labs(title="ETH price trend",
+       subtitle="ETH price",
+       x="Date",y="ETH Price") +
+  theme_minimal()
+
+ggarrange(GOLD_plot, OIL_plot, BTC_plot, ETH_plot, ncol=2, nrow=2)
+```
+
+## 1.3 Market Index
+
+```{r}
+#| label: Market_index
+#| fig-width: 18
+#| fig-height: 3
+#| fig-column: page-right
+#| warning: false
+CHIBORD <-openxlsx::read.xlsx(raw_data_file,sheet="CHIBORD",detectDates = TRUE)
+df5 <- melt(CHIBORD, id.vars = "报告日")
+CHIBORD_plot <- ggplot(df5%>%filter(报告日>='2000-01-01',variable=='利率'),aes(x=报告日, y=value,color=variable)) +
+  geom_line(linetype = "dashed") +
+  geom_line() +
+  geom_point(size=1) +
+  labs(title="Daily interest rate",
+       subtitle="Daily interest rate",
+       x="Date",y="Daily interest rate") +
+  theme_minimal()
+
+CHIBORA <-openxlsx::read.xlsx(raw_data_file,sheet="CHIBORA",detectDates = TRUE)
+df6 <- melt(CHIBORA, id.vars = "报告日")
+CHIBORA_plot <- ggplot(df6%>%filter(报告日>='2000-01-01',variable=='利率'),aes(x=报告日, y=value,color=variable)) +
+  geom_line(linetype = "dashed") +
+  geom_line() +
+  geom_point(size=1) +
+  labs(title="Annual interest rate",
+       subtitle="Annual interest rate",
+       x="Date",y="Annual interest rate") +
+  theme_minimal()
+
+ggarrange(CHIBORD_plot, CHIBORA_plot, ncol=2, nrow=1)
+
+USIR <-openxlsx::read.xlsx(raw_data_file,sheet="USIR",detectDates = TRUE)
+df7 <- melt(select(USIR,日期,今值), id.vars = "日期") 
+USIR_plot <- ggplot(df7%>%filter(日期>='2000-01-01',value!=''),aes(x=日期, y=value)) +
+  geom_line() +
+  labs(title="US interest rate",
+       subtitle="US interest rate",
+       x="Date",y="US interest rate") +
+  theme_minimal()
+  
+EUIR <-openxlsx::read.xlsx(raw_data_file,sheet="EUIR",detectDates = TRUE)
+df8 <- melt(select(EUIR,日期,今值), id.vars = "日期") 
+EUIR_plot <- ggplot(df8%>%filter(日期>='2000-01-01',value!=''),aes(x=日期, y=value)) +
+  geom_line() +
+  labs(title="EU interest rate",
+       subtitle="EU interest rate",
+       x="Date",y="EU interest rate") +
+  theme_minimal()
+  
+JPIR <-openxlsx::read.xlsx(raw_data_file,sheet="JPIR",detectDates = TRUE)
+df9 <- melt(select(JPIR,日期,今值), id.vars = "日期") 
+JPIR_plot <- ggplot(df9%>%filter(日期>='2000-01-01',value!=''),aes(x=日期, y=value)) +
+  geom_line() +
+  labs(title="JP interest rate",
+       subtitle="JP interest rate",
+       x="Date",y="JP interest rate") +
+  theme_minimal()
+
+ggarrange(USIR_plot, EUIR_plot, JPIR_plot, ncol=3, nrow=1)
+
+CNBS <-openxlsx::read.xlsx(raw_data_file,sheet="Macro_CNBS",detectDates = TRUE)
+df14 <- CNBS %>% select(-Receive_Date) %>% mutate(年份=as.Date(paste(年份,"-01",sep=""))) %>% melt(id.vars = "年份")
+ggplot(df14%>%filter(年份>='2000-01-01'),aes(x=年份, y=value,color=variable)) +
+  geom_line() +
+  geom_point(size=1) +
+  labs(title="CNBS rate",
+       subtitle="CNBS rate",
+       x="Year-Month",y="CNBS rate") +
+  theme_minimal()
+
+QYSPJG <-openxlsx::read.xlsx(raw_data_file,sheet="Macro_QYSPJG",detectDates = TRUE)
+df15 <- QYSPJG %>% select(c(`月份`,`总指数-指数值`,`农产品-指数值`,`矿产品-指数值`,`煤油电-指数值`)) %>%
+mutate(月份=as.Date(paste(gsub('年|月份','-',月份),"01",sep=""))) %>% 
+melt(id.vars = "月份")
+ggplot(df15%>%filter(月份>='2000-01-01'),aes(x=月份, y=value,color=variable)) +
+  geom_line() +
+  geom_point(size=1) +
+  labs(title="QYSPJG rate",
+       subtitle="QYSPJG rate",
+       x="Year-Month",y="QYSPJG rate") +
   theme_minimal()
 
 ```
+
+## 2.1 Testing margin 2 insert a pic
+
+![](/images/Garden.JPG){width="621"}
+
+![](/images/Rainbow.JPG)
+

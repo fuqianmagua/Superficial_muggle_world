@@ -1,6 +1,6 @@
 ---
 title: "Hello Muggles"
-subtitle: "Welcome to Superficial Muggle's World. Let's dive deep into the muggle world and see some magics in our world"
+#subtitle: "Welcome to Superficial Muggle's World. Let's dive deep into the muggle world and see some magics in our world"
 #about: 
 #  template: trestles
 #  image-shape: round
@@ -27,12 +27,26 @@ toc: false
 #  filter-ui: false
 #page-layout: article
 page-layout: full
-title-block-banner: "Garden.JPG"
+title-block-banner: "images/Garden.JPG"
 #title-block-banner: true
+#filters:
+#  - webr
 ---
 
-::: {layout-ncol=2}
-[![](images/红乙女.jpeg){fig-align="center" width="527" height="643"}](Garden_Maintenance/Garden_Maintenance.qmd)
+::: {layout-ncol="2"}
+[![](images/红乙女.jpeg){fig-align="center" width="200" height="300"}](Garden_Maintenance/Garden_Maintenance.qmd)
 
-[![](images/猫肥家润.JPG){fig-align="center" width="527" height="643"}](Econ_Intro/index.qmd)
+[![](images/猫肥家润.JPG){fig-align="center" width="200" height="300"}](Econ_Intro/index.qmd)
 :::
+
+
+
+<!--
+This is a webR-enabled code cell in a Quarto HTML document.
+主旨在帮你更好的理解这个世界，而不是预言世界发展 更别提股市了
+
+{webr-r}
+fit = lm(mpg \~ am, data = mtcars) 
+summary(fit) 
+-->
+

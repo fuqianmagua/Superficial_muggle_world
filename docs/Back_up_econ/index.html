@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Pumpkin Chen">
 
-<title>Superficial Muggle World - Hello Muggles</title>
+<title>Superficial Muggle World - Econ Intro</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,26 +20,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/Miso_Favicon.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/Miso_Favicon.jpg" rel="icon" type="image/jpeg">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,18 +103,12 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-KL245KQBX3', { 'anonymize_ip': true});
 </script>
-<style>
-
-      .quarto-title-block .quarto-title-banner {
-        background-image: url(images/Garden.JPG);
-background-size: cover;
-      }
-</style>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Superficial Muggle World - Hello Muggles">
-<meta name="twitter:image" content="images/红乙女.jpeg">
+<link rel="stylesheet" href="../styles.css">
+<meta name="twitter:title" content="Superficial Muggle World - Econ Intro">
+<meta name="twitter:image" content="index_files/figure-html/load-packages-1.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -92,10 +119,10 @@ background-size: cover;
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./Miso_Watching_You.jpg" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../Miso_Watching_You.jpg" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Superficial Muggle World</span>
     </a>
   </div>
@@ -111,15 +138,15 @@ background-size: cover;
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
         <li>
-    <a class="dropdown-item" href="./about_me.html" rel="" target="">
+    <a class="dropdown-item" href="../about_me.html" rel="" target="">
  <span class="dropdown-text">About Me</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./about_muggle_world.html" rel="" target="">
+    <a class="dropdown-item" href="../about_muggle_world.html" rel="" target="">
  <span class="dropdown-text">About Muggle’s World</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./about_magic_world.html" rel="" target="">
+    <a class="dropdown-item" href="../about_magic_world.html" rel="" target="">
  <span class="dropdown-text">About Magic World</span></a>
   </li>  
     </ul>
@@ -132,62 +159,113 @@ background-size: cover;
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Hello Muggles</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Pumpkin Chen </p>
-            </div>
-    </div>
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#this-is-testing-to-set-up-margin" id="toc-this-is-testing-to-set-up-margin" class="nav-link active" data-scroll-target="#this-is-testing-to-set-up-margin">1.This is testing to set up margin</a>
+  <ul class="collapse">
+  <li><a href="#margin-1-economic-basic-info" id="toc-margin-1-economic-basic-info" class="nav-link" data-scroll-target="#margin-1-economic-basic-info">1. 1 Margin 1: Economic Basic info</a></li>
+  <li><a href="#margin-2-testing-margin-two-for-computation" id="toc-margin-2-testing-margin-two-for-computation" class="nav-link" data-scroll-target="#margin-2-testing-margin-two-for-computation">1.2 Margin 2: Testing margin two for computation</a></li>
+  </ul></li>
+  <li><a href="#this-is-test-margin-2" id="toc-this-is-test-margin-2" class="nav-link" data-scroll-target="#this-is-test-margin-2">2.This is test margin 2</a>
+  <ul class="collapse">
+  <li><a href="#testing-margin-2-insert-a-pic" id="toc-testing-margin-2-insert-a-pic" class="nav-link" data-scroll-target="#testing-margin-2-insert-a-pic">2.1 Testing margin 2 insert a pic</a>
+  <ul class="collapse">
+  <li><a href="#test-inside-margin-to-display-further" id="toc-test-inside-margin-to-display-further" class="nav-link" data-scroll-target="#test-inside-margin-to-display-further">2.1.1 Test inside margin to display further</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#akshare-data" id="toc-akshare-data" class="nav-link" data-scroll-target="#akshare-data">3.AKShare data</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
-
-
-
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure class="figure">
-<p><a href="./Garden_Maintenance/Garden_Maintenance.html"><img src="images/红乙女.jpeg" class="img-fluid figure-img" width="200"></a></p>
-</figure>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Econ Intro</h1>
 </div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure class="figure">
-<p><a href="./Econ_Intro/index.html"><img src="images/猫肥家润.JPG" class="img-fluid figure-img" width="200"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<!--
-This is a webR-enabled code cell in a Quarto HTML document.
-主旨在帮你更好的理解这个世界，而不是预言世界发展 更别提股市了
-
-{webr-r}
-fit = lm(mpg \~ am, data = mtcars) 
-summary(fit) 
--->
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="this-is-testing-to-set-up-margin" class="level1">
+<h1>1.This is testing to set up margin</h1>
+<section id="margin-1-economic-basic-info" class="level2">
+<h2 class="anchored" data-anchor-id="margin-1-economic-basic-info">1. 1 Margin 1: Economic Basic info</h2>
+<p>Overall picture of economy behavior from may dimensions to observe the chances</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/load-packages-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="margin-2-testing-margin-two-for-computation" class="level2">
+<h2 class="anchored" data-anchor-id="margin-2-testing-margin-two-for-computation">1.2 Margin 2: Testing margin two for computation</h2>
+<div class="sourceCode" id="Test_Comp"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="Test_Comp-1"><a href="#Test_Comp-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">2</span><span class="sc">+</span><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="this-is-test-margin-2" class="level1">
+<h1>2.This is test margin 2</h1>
+<section id="testing-margin-2-insert-a-pic" class="level2">
+<h2 class="anchored" data-anchor-id="testing-margin-2-insert-a-pic">2.1 Testing margin 2 insert a pic</h2>
+<p><img src="..\images/Garden.JPG" class="img-fluid" width="621"></p>
+<p><img src="..\images/Rainbow.JPG" class="img-fluid"></p>
+<section id="test-inside-margin-to-display-further" class="level3">
+<h3 class="anchored" data-anchor-id="test-inside-margin-to-display-further">2.1.1 Test inside margin to display further</h3>
+<p>You’ll note that there are some special comments at the top of the code block. These are cell level options that make the figure <a href="../authoring/cross-references.qmd">cross-referenceable</a>.</p>
+<p>This document results in the following rendered output:</p>
+<p>You can produce a wide variety of output types from executable code blocks, including plots, tabular output from data frames, and plain text output (e.g.&nbsp;printing the results of statistical summaries).</p>
+<p>There are many options which control the behavior of code execution and output, you can read more about them in the article on <a href="execution-options.qmd">Execution Options</a>.</p>
+<p>In addition to code blocks which interupt the flow of markdown, you can also include code inline. Read more about inline code in the <a href="inline-code.qmd">Inline Code</a> article.</p>
+<section id="test-inside-margin-to-display-diagram" class="level4">
+<h4 class="anchored" data-anchor-id="test-inside-margin-to-display-diagram">2.1.1.1 Test inside margin to display diagram</h4>
+<section id="output-formats" class="level5">
+<h5 class="anchored" data-anchor-id="output-formats">Output Formats</h5>
+<p>Another difference between R Markdown and Quarto is related to output formats. Quarto includes many more built in output formats (and many more options for customizing each format). Quarto also has native features for special project types like <a href="../websites/">Websites</a>, <a href="../books/">Books</a>, and <a href="../websites/website-blog.qmd">Blogs</a> (rather than relying on external packages).</p>
+<p>To use a format in Quarto you use the <code>format</code> key rather than the <code>output</code> key as you did in R Markdown. Here’s a comparison of equivalent format specifications:</p>
+</section>
+<section id="r-markdown" class="level5" data-layout-nrow="2">
+<h5 class="anchored" data-anchor-id="r-markdown">R Markdown</h5>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span><span class="at"> </span><span class="er">output:</span><span class="at">   </span><span class="er">html_document:</span><span class="at">     </span><span class="er">toc:</span><span class="at"> </span><span class="er">true</span><span class="at">     </span><span class="er">number_sections:</span><span class="at"> </span><span class="er">true</span><span class="at">     </span><span class="er">css:</span><span class="at"> </span><span class="er">styles.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="quarto" class="level6">
+<h6 class="anchored" data-anchor-id="quarto">Quarto</h6>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span><span class="at"> </span><span class="er">format:</span><span class="at">   </span><span class="er">html:</span><span class="at">     </span><span class="er">toc:</span><span class="at"> </span><span class="er">true</span><span class="at">     </span><span class="er">number-sections:</span><span class="at"> </span><span class="er">true</span><span class="at">     </span><span class="er">css:</span><span class="at"> </span><span class="er">styles.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section id="akshare-data" class="level1">
+<h1>3.AKShare data</h1>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+
+
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -427,4 +505,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
